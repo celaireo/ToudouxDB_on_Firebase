@@ -1,0 +1,42 @@
+COMMENT IMPORTER UN FICHIER JSON DANS FIREBASE
+PAR LES COMMANDES.
+
+A/
+npm install -g firebase-tools
+
+B/
+firebase login
+
+C/ Creer un projet Firestore
+firebase init
+
+
+D/ 
+npm install firebase-admin
+
+E/ 
+node importFirestore.js
+
+Remarque: 
+1) pour voir et/ou selectionner un projet faire la commande: firebase projects:list
+2) Dans RealTime (pas no code), on peut importer les donnees en cliquant sur importer json
+
+
+Les erreurs a eviter: 
+
+
+1- J'avais oublie de faire npm init avant d'utiliser les commandes " npm" pour avoir un package.json.
+on peut exiger de mettre "type": "module" dans le package.json si on utilise un import au lieu de require
+
+2- Le fichier Json ne correspondait pas aux exigences de Firestore, il fallait un ID pour chaque Document,
+
+3- Le bon code pour import les datas en js. faire attention a utiliser import ou require,
+
+4- Mettre le chemin d'acces vers le fichier serviceAccountKey.json qu'on telecharge dans:
+parametre de projet > Comptes de services > Generer une nouvelle cle privee. L'ideal est de le mettre dans le dossier du projet.
+
+5- Executer la commande node importData.js une fois que le script d'importation est bon et que le fichier json est pret aussi. 
+
+
+Autres: 
+npx -p node-firestore-import-export firestore-import -a mock_data.json -b backup.json

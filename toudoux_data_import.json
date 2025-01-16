@@ -1,0 +1,250 @@
+{
+    "salons": {
+      "salon001": {
+        "name": "Pattes en Beauté",
+        "address": "45 Avenue des Animaux",
+        "city": "Lyon",
+        "postalCode": "69002",
+        "phone": "+33 7 89 65 43 21",
+        "email": "contact@pattesbeaute.fr",
+        "image": "https://random.image/salon001.jpg",
+        "services": [
+          {
+            "id": 1,
+            "name": "Shampoing",
+            "price": 20
+          },
+          {
+            "id": 2,
+            "name": "Coupe des griffes",
+            "price": 10
+          }
+        ],
+        "ownerId": "user001",
+        "rating": 4.8,
+        "reviews": [
+          "review001",
+          "review002"
+        ]
+      },
+      "salon002": {
+        "name": "Toilettage Étoilé",
+        "address": "12 Rue des Chiens",
+        "city": "Marseille",
+        "postalCode": "13001",
+        "phone": "+33 6 23 45 67 89",
+        "email": "contact@etoiletoile.fr",
+        "image": "https://random.image/salon002.jpg",
+        "services": [
+          {
+            "id": 1,
+            "name": "Toilettage complet",
+            "price": 50
+          },
+          {
+            "id": 2,
+            "name": "Soin des oreilles",
+            "price": 15
+          }
+        ],
+        "ownerId": "user002",
+        "rating": 4.5,
+        "reviews": [
+          "review003",
+          "review004"
+        ]
+      },
+      "salon003": {
+        "name": "Beauté et Poils",
+        "address": "5 Avenue des Bêtes",
+        "city": "Paris",
+        "postalCode": "75001",
+        "phone": "+33 1 45 67 89 10",
+        "email": "contact@beautépoils.fr",
+        "image": "https://random.image/salon003.jpg",
+        "services": [
+          {
+            "id": 1,
+            "name": "Bain de vapeur",
+            "price": 25
+          },
+          {
+            "id": 2,
+            "name": "Soin des dents",
+            "price": 15
+          }
+        ],
+        "ownerId": "user003",
+        "rating": 4.9,
+        "reviews": [
+          "review005",
+          "review006"
+        ]
+      }
+    },
+    "users": {
+      "user001": {
+        "name": "Marie Dupont",
+        "email": "marie.dupont@example.com",
+        "phone": "+33 6 78 90 12 34",
+        "isProfessional": false,
+        "profileImage": "https://random.image/user001.jpg",
+        "createdAt": "2025-01-01T10:00:00Z",
+        "salonsOwned": [],
+        "animals": [
+          "animal001",
+          "animal002"
+        ]
+      },
+      "user002": {
+        "name": "Jean Martin",
+        "email": "jean.martin@example.com",
+        "phone": "+33 7 65 43 21 98",
+        "isProfessional": true,
+        "profileImage": "https://random.image/user002.jpg",
+        "createdAt": "2025-01-02T12:00:00Z",
+        "salonsOwned": [
+          "salon002"
+        ],
+        "animals": []
+      },
+      "user003": {
+        "name": "Alice Lefevre",
+        "email": "alice.lefevre@example.com",
+        "phone": "+33 6 11 22 33 44",
+        "isProfessional": true,
+        "profileImage": "https://random.image/user003.jpg",
+        "createdAt": "2025-01-05T14:00:00Z",
+        "salonsOwned": [
+          "salon003"
+        ],
+        "animals": []
+      }
+    },
+    "animals": {
+      "animal001": {
+        "name": "Choupette",
+        "type": "Chat",
+        "breed": "Persan",
+        "age": 3,
+        "size": "Petit",
+        "preferences": "Brossage quotidien",
+        "ownerId": "user001",
+        "image": "https://random.image/animal001.jpg"
+      },
+      "animal002": {
+        "name": "Rex",
+        "type": "Chien",
+        "breed": "Berger Allemand",
+        "age": 5,
+        "size": "Grand",
+        "preferences": "Balade quotidienne",
+        "ownerId": "user001",
+        "image": "https://random.image/animal002.jpg"
+      },
+      "animal003": {
+        "name": "Luna",
+        "type": "Chat",
+        "breed": "Siamois",
+        "age": 2,
+        "size": "Moyen",
+        "preferences": "Câlins",
+        "ownerId": "user002",
+        "image": "https://random.image/animal003.jpg"
+      }
+    },
+    "reservations": {
+      "reservation001": {
+        "userId": "user001",
+        "salonId": "salon001",
+        "services": [
+          {
+            "id": 1,
+            "name": "Shampoing",
+            "price": 20
+          }
+        ],
+        "date": "2025-02-15",
+        "time": "11:00",
+        "status": "Confirmé",
+        "totalPrice": 20
+      },
+      "reservation002": {
+        "userId": "user002",
+        "salonId": "salon002",
+        "services": [
+          {
+            "id": 1,
+            "name": "Toilettage complet",
+            "price": 50
+          }
+        ],
+        "date": "2025-02-20",
+        "time": "14:30",
+        "status": "En attente",
+        "totalPrice": 50
+      },
+      "reservation003": {
+        "userId": "user003",
+        "salonId": "salon003",
+        "services": [
+          {
+            "id": 2,
+            "name": "Soin des dents",
+            "price": 15
+          }
+        ],
+        "date": "2025-03-01",
+        "time": "16:00",
+        "status": "En attente",
+        "totalPrice": 15
+      }
+    },
+    "reviews": {
+      "review001": {
+        "userId": "user001",
+        "salonId": "salon001",
+        "rating": 5,
+        "comment": "Service parfait, je reviendrai !",
+        "createdAt": "2025-01-16T09:00:00Z"
+      },
+      "review002": {
+        "userId": "user002",
+        "salonId": "salon002",
+        "rating": 4,
+        "comment": "Très bon service, mais un peu cher.",
+        "createdAt": "2025-01-17T10:30:00Z"
+      },
+      "review003": {
+        "userId": "user001",
+        "salonId": "salon003",
+        "rating": 5,
+        "comment": "Un excellent toilettage, mon chien adore !",
+        "createdAt": "2025-01-18T12:00:00Z"
+      }
+    },
+    "subscriptions": {
+      "subscription001": {
+        "userId": "user001",
+        "plan": "19€",
+        "startDate": "2025-01-01",
+        "endDate": "2025-12-31",
+        "isActive": true
+      },
+      "subscription002": {
+        "userId": "user002",
+        "plan": "29€",
+        "startDate": "2025-02-01",
+        "endDate": "2026-01-31",
+        "isActive": true
+      },
+      "subscription003": {
+        "userId": "user003",
+        "plan": "39€",
+        "startDate": "2025-01-10",
+        "endDate": "2025-12-31",
+        "isActive": true
+      }
+    }
+  }
+git init  
